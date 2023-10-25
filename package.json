@@ -4,7 +4,7 @@
   "description": "Implementação do https://tabnews.com.br para o https://curso.dev com FilipeDeschamps.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "next dev"
   },
   "author": "",
   "license": "MIT",
