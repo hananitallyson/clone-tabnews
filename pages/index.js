@@ -1,5 +1,5 @@
 function Home() {
-    return <h1>Cláudio, tu é um amigo de verdade!</h1>
+    return <h1>Cláudio, é um amigo incrível!</h1>
 }
 
 export default Home;
