@@ -5,15 +5,22 @@ Implementação do https://tabnews.com.br para o https://curso.dev com FilipeDes
 ## Subir servidor de desenvolvimento
 
 ```sh
-npm run dev # next dev
+npm run dev # npm run services:up && next dev
 ```
 
-## Subir database
+## Subir, parar e derrubar serviços
 
 ```sh
-docker compose -f infra/compose.yaml up -d
+npm run services:up # docker compose -f infra/compose.yaml up -d
 ```
 
+```sh
+npm run services:stop # docker compose -f infra/compose.yaml stop
+```
+
+```sh
+npm run services:down # docker compose -f infra/compose.yaml down
+```
 
 ## Executar linter
 
