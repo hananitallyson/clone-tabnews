@@ -14,7 +14,7 @@ async function status(request, response) {
     updated_at: updatedAt,
     dependencies: {
       database: {
-        max_connections: databaseMaxConnections,
+        max_connections: parseInt(databaseMaxConnections),
         opened_connections: databaseOpenedConnections,
         version: databaseVersion,
       },
