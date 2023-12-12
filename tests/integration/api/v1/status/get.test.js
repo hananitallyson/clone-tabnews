@@ -26,7 +26,7 @@ test("GET to /api/v1/status should return database opened_connections as defined
   const response = await fetch("http://localhost:3000/api/v1/status");
   const responseBody = await response.json();
   expect(responseBody.dependencies.database.opened_connections).toBeDefined();
-  expect(responseBody.dependencies.database.opened_connections).not.toBeNull();
+  expect(responseBody.dependencies.database.opened_connections).toEqual(1);
 });
 
 test("GET to /api/v1/status should return database max_connections as defined and not null", async () => {
