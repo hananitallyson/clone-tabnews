@@ -13,10 +13,16 @@ async function query(queryObject) {
     allowExitOnIdle: true,
   });
   const client = await pool.connect();
-  const result = await client.query(queryObject);
-  client.release(true);
-  await pool.end();
-  return result;
+
+  try {
+    const result = await client.query(queryObject);
+    return result;
+  } catch (error) {
+    console.error(error);
+  } finally {
+    client.release(true);
+    await pool.end();
+  }
 }
 
 export default {
